@@ -1,13 +1,14 @@
-/* Basic Reset */
+/* Basic body styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
@@ -20,20 +21,6 @@ header {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.header-content {
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.profile-photo {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 4px solid #4db5ff;
-    margin-bottom: 1rem;
-}
-
 .subtitle {
     font-size: 1.1rem;
     color: #ccd6f6;
@@ -46,101 +33,245 @@ header {
     text-decoration: none;
     font-weight: bold;
 }
-
 .social-links a:hover {
     color: #90ee90;
 }
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #4db5ff;
+    margin-bottom: 1rem;
+}
+/* Landing Hero Section */
+.landing-hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #005f6a, #00bfae);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 2s ease-out;
+}
 
-nav a {
-    color: #ccd6f6;
-    margin: 0 10px;
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    animation: fadeInText 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 0.5s forwards;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 30px;
     text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInText 2s ease-out 1s forwards;
+}
+
+.cta-button:hover {
+    background-color: #ff5a4d;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Static Header for Home Page */
+.fixed-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.fixed-header .static-info h2 {
+    margin: 0;
+    font-size: 24px;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #4db5ff;
+.fixed-header .static-info p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
-/* Main Content */
+/* Main content padding adjustment */
 main {
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    max-width: 1100px;
-    margin: 2rem auto;
+    padding: 80px 20px 20px 20px; /* Adding space for the fixed header */
+}
+
+/* About Section Styling */
+#about {
+    position: relative;
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+#about h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Skills Section Styling */
+#skills {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-section {
-    margin-bottom: 2rem;
+#skills h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-h2 {
-    font-size: 2rem;
-    color: #1e2a38;
-    margin-bottom: 1rem;
-}
-
-/* Skills Section */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
 .skill-item {
-    background: #f1f5f9;
-    padding: 1rem;
+    background-color: #f9f9f9;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
 }
 
-/* Projects and Experience */
-.project-card, .experience-item {
-    background: #f1f5f9;
-    padding: 1.5rem;
+/* Projects Section Styling */
+#projects {
+    background-color: #fff;
+    padding: 40px 20px;
     border-radius: 8px;
-    margin-top: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project-card h3, .experience-item h3 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+#projects h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.project-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-form input, form textarea, form button {
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 16px;
+}
+
+/* Experience Section Styling */
+#experience {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#experience h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Contact Section Styling */
+#contact {
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+form input,
+form textarea,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
 form button {
-    background-color: #1e2a38;
-    color: #fff;
+    background-color: #ff6f61;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 form button:hover {
-    background-color: #4db5ff;
+    background-color: #ff5a4d;
 }
 
-/* Footer */
 footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 1rem;
-    background-color: #1e2a38;
-    color: #fff;
-    font-size: 0.9rem;
+    padding: 10px 0;
+    margin-top: 40px;
 }
