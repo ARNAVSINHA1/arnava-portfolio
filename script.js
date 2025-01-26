@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     charIndex = 0;
                     textIndex = (textIndex + 1) % textArray.length;
                     changeText();
-                }, 1000);
+                }, 7000);
             }
         }, 100);
     };

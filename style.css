@@ -12,16 +12,39 @@ body {
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
+nav {
+    text-align: center;
+    margin-top: 20px;
+}
 
+.nav-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    background-color: #6c5ce7;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #5c4ac7;
+}
+
+.nav-button:active {
+    background-color: #4c3e9b;
+}
 /* Header Section */
 header {
-    background-color: rgba(30, 42, 56, 0.85);
+    background-color: rgba(72, 150, 240, 0.85);
     color: #fff;
     padding: 2.5rem 1rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.subtitle {
+.dynamic-text {
     font-size: 1.1rem;
     color: #ccd6f6;
     margin-bottom: 1rem;
@@ -46,7 +69,7 @@ header {
 /* Landing Hero Section */
 .landing-hero {
     height: 100vh;
-    background: linear-gradient(135deg, #005f6a, #00bfae);
+    background: linear-gradient(135deg, #a9ecf3, #00bfae);
     color: white;
     display: flex;
     justify-content: center;
@@ -111,7 +134,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #337d94;
     color: white;
     padding: 15px 20px;
     z-index: 1000;
