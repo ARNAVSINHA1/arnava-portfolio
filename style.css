@@ -51,7 +51,7 @@ header {
 }
 
 .social-links a {
-    color: #4db5ff;
+    color: #ffffff;
     margin: 0 8px;
     text-decoration: none;
     font-weight: bold;
@@ -131,10 +131,11 @@ header {
 
 /* Static Header for Home Page */
 .fixed-header {
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #337d94;
+    background-color: #477583;
     color: white;
     padding: 15px 20px;
     z-index: 1000;
@@ -153,7 +154,7 @@ header {
 }
 
 /* Main content padding adjustment */
-main {
+main,section {
     padding: 80px 20px 20px 20px; /* Adding space for the fixed header */
 }
 
