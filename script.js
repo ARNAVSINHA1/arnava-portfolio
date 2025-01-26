@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // You can add any interactive features or animations specific to the landing page here
+    // For example, a fade-in effect or CTA button interaction:
+    const ctaButton = document.querySelector('.cta-button');
+    ctaButton.addEventListener('click', () => {
+        // You could add a fade-out effect or animation here before navigating to home page
+        window.location.href = 'home.html';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
     // Dynamic Text Animation in Hero Section
     const dynamicText = document.querySelector('.dynamic-text');
-    const textArray = ['Electrical Engineer', 'Full-Stack Developer', 'Problem Solver'];
+    const textArray = ['Software Developer | Problem Solver | Tech Enthusiast | Electrical Engineer','Electrical Engineer', 'Full-Stack Developer', 'Problem Solver'];
     let textIndex = 0;
     let charIndex = 0;
 
@@ -57,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     charIndex = 0;
                     textIndex = (textIndex + 1) % textArray.length;
                     changeText();
-                }, 7000);
+                }, 100000);
             }
         }, 100);
     };

@@ -13,6 +13,7 @@ body {
     background-size: cover;
 }
 nav {
+    color: #000;
     text-align: center;
     margin-top: 20px;
 }
@@ -46,7 +47,7 @@ header {
 }
 .dynamic-text {
     font-size: 1.1rem;
-    color: #ccd6f6;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
